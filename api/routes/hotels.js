@@ -1,17 +1,17 @@
 import express from "express";
 import { createHotel, deleteHotel, getAllHotels, getHotel, updateHotel } from "../controllers/hotel.js";
-
+import { verifyAdmin } from "../utils/verify.js";
 
 const router = express.Router();
 
 //create
-router.post("/", createHotel);
+router.post("/",verifyAdmin, createHotel);
 
 //update
-router.put("/:id", updateHotel);
+router.put("/:id", verifyAdmin, updateHotel);
 
 //delete
-router.delete("/:id", deleteHotel);
+router.delete("/:id", verifyAdmin, deleteHotel);
 
 //get hotel
 router.get("/:id",getHotel);
