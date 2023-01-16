@@ -1,12 +1,13 @@
 .listContainer {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin: 0px 0px 0px 0px;
+  padding: 8px 115px 8px 115px;
 }
 
 .listWrapper {
   width: 100%;
-  max-width: 1024px;
+  max-width:none;
   display: flex;
   gap: 20px;
 }
